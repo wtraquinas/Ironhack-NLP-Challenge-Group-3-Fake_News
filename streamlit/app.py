@@ -88,27 +88,21 @@ with left:
 
     st.subheader("📝 News Article")
 
+    if "article" not in st.session_state:
+        st.session_state.article = ""
+
     selected = st.selectbox(
-        "Example Articles",
+        "Choose an example",
         list(examples.keys())
     )
 
-    if "news_text" not in st.session_state:
-        st.session_state.news_text = ""
-
     if selected != "Choose an example...":
-        st.session_state.news_text = examples[selected]
+        st.session_state.article = examples[selected]
 
-    news = st.text_area(
-
+    st.text_area(
         "Paste or edit a news article",
-
-        value=st.session_state.news_text,
-
-        height=350,
-
-        key="article"
-
+        key="article",
+        height=350
     )
 
     col1, col2 = st.columns(2)
