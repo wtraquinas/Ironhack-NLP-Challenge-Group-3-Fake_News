@@ -97,11 +97,11 @@ with left:
 
     c1, c2 = st.columns(2)
 
-    if c1.button("Reuters Economy", use_container_width=True):
+    if c1.button("Reuters UN", use_container_width=True):
         st.session_state.article = examples["Real News #1"]
         st.rerun()
 
-    if c2.button("NASA Satellite", use_container_width=True):
+    if c2.button("Reuters China", use_container_width=True):
         st.session_state.article = examples["Real News #2"]
         st.rerun()
 
@@ -109,11 +109,11 @@ with left:
 
     c3, c4 = st.columns(2)
 
-    if c3.button("Alien Invasion", use_container_width=True):
+    if c3.button("21st Century Wire", use_container_width=True):
         st.session_state.article = examples["Fake News #1"]
         st.rerun()
 
-    if c4.button("Magic Lemon Cure", use_container_width=True):
+    if c4.button("Obamas", use_container_width=True):
         st.session_state.article = examples["Fake News #2"]
         st.rerun()
 
