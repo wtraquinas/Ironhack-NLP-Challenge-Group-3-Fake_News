@@ -92,14 +92,15 @@ with left:
         st.session_state.article = ""
 
     selected = st.selectbox(
-        "Choose an example",
-        list(examples.keys())
+        "Example Articles",
+        list(examples.keys()),
+        key="example_selector"
     )
 
-    if selected != "Choose an example...":
+    if st.button("📄 Load Example"):
         st.session_state.article = examples[selected]
 
-    st.text_area(
+    news = st.text_area(
         "Paste or edit a news article",
         key="article",
         height=350
