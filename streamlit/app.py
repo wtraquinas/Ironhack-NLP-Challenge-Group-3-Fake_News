@@ -42,20 +42,16 @@ examples = {
     "Choose an example...": "",
 
     "Real News #1":
-    """The Federal Reserve announced today that interest rates
-    will remain unchanged while inflation continues to slow.""" ,
+    """GENEVA (Reuters) - A United Nations human rights panel called on the Russian Federation on Monday to step up prosecutions of racist attacks by ultra-nationalists and neo-Nazis and of hate speech by politicians. Russian authorities must intensify measures to  vigorously combat racist behavior in sports, particularly in football, and ensure that sports regulatory bodies investigate manifestations of racism, xenophobia and intolerance,  the U.N. Committee against Racial Discrimination (CERD) said. Fines or administrative sanctions should be imposed for such cases..""" ,
 
     "Real News #2":
-    """NASA successfully launched a new weather satellite to improve
-    climate monitoring across North America.""" ,
+    """BEIJING (Reuters) - China s Foreign Ministry said on Friday that it opposed North Korea s use of ballistic missiles in violation of United Nations Security Council resolutions. The emphasis on curbing North Korea s missile and nuclear capabilities should not come at the expense of pushing for a peaceful and diplomatic resolution, ministry spokeswoman Hua Chunying said after North Korea fired a missile that flew over Japan s northern Hokkaido island far out into the Pacific Ocean.""" ,
 
     "Fake News #1":
-    """Scientists confirm the Earth will become completely dark
-    for six days beginning next month.""" ,
+    """21st Century Wire says While politicians and news media alike are accusing Trump of pushing an  arms race  in his December 22nd Tweet about strengthening America s nuclear capability, the Obama administration made a landmark change to the policies governing space based weapons under the guise of missile defense. Why is the mainstream media silent on what Obama just did? Not only does this potentially damage relationships with other military powers such as Russia and China but is being called a massive waste of money.""" ,
 
     "Fake News #2":
-    """Drinking hot lemon water every hour permanently eliminates
-    every virus from the human body."""
+    """The Obamas pride themselves on being staples in the black community who can do no wrong in the eyes of African Americans. Unfortunately for them, however, more and more black people are turning on the Obamas and seeing them for what they really are. After seeing Michelle Obama s graduation speech at the predominantly black Tuskegee University."""
 }
 
 ###############################################################
