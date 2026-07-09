@@ -21,9 +21,11 @@ st.set_page_config(
 @st.cache_resource
 def load_models():
 
-    model = joblib.load("mod4_joblib_svm_ngtfidf.pkl")
+    BASE_DIR = Path(__file__).parent
 
-    vectorizer = joblib.load("mod4_joblib_svm_ngtfidf_vectorizer.pkl")
+    model = joblib.load(BASE_DIR / "mod4_joblib_svm_ngtfidf.pkl")
+
+    vectorizer = joblib.load(BASE_DIR / "mod4_joblib_svm_ngtfidf_vectorizer.pkl")
 
     return model, vectorizer
 
