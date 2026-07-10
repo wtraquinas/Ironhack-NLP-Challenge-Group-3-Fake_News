@@ -94,9 +94,18 @@ using only the article text.
 # Dataset
 
 **Dataset:** Fake News Dataset
+- dataset containing news articles with the following columns:
+
+    - label: 0 if the news is fake, 1 if the news is real.
+    - title: The headline of the news article.
+    - text: The full content of the article.
+    - subject: The category or topic of the news.
+    - date: The publication date of the article.
 
 * File: `dataset/data.csv`
 * Text-based binary classification dataset
+  
+<br>
 
 <br>
 
@@ -164,11 +173,12 @@ Real / Fake
 
 The final deployed model was saved using **Joblib** together with the trained TF-IDF vectorizer.
 
----
+
 
 
 <br>
 
+---
 
 # Results
 
