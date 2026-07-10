@@ -6,31 +6,35 @@ This project applies **Natural Language Processing (NLP)** and **Machine Learnin
 
 A user-friendly **Streamlit web application** was also developed, allowing users to paste news articles or select example articles and receive instant predictions with confidence scores.
 
+
+
+<p align="center">
+<img src="/images/ToyStory-3758131314.jpg" height="420" alt="Horse prediction">
+</p>
+
 ---
 
 ## Sample Prediction
 
 ### Streamlit Application
 
-> *(Insert a screenshot or GIF of the application here)*
+<center>
+<table>
+  <td><img src="/images/deploy_streamlit_02_pred_260710.jpg" height="420" alt="Horse prediction"></td>
+  <td> &nbsp &nbsp </td>
+  <td><img src="/images/deploy_streamlit_02_pred_260710.jpg" height="420" alt="Dookie prediction"></td>
+</table>
+</center>
 
-Example output:
 
-```
-Prediction: ✅ Real News
-
-Confidence: 98.6%
-
-Decision Score: +2.84
-```
 
 ---
 
 ## Live Demo
 
-🌐 **Hugging Face Spaces**
+🌐 **Streamlit Cloud**
 
-https://huggingface.co/spaces/AntonioTrx99/project1_streamlit
+[https://project2-nlp-fakenews.streamlit.app](https://project2-nlp-fakenews.streamlit.app)
 
 ---
 
@@ -51,20 +55,9 @@ using only the article text.
 
 **Dataset:** Fake News Dataset
 
-* Source: Kaggle
 * File: `dataset/data.csv`
 * Text-based binary classification dataset
-* Classes:
 
-  * Fake
-  * Real
-* License: Refer to the original Kaggle dataset license.
-
-Dataset link:
-
-https://www.kaggle.com/
-
-*(Replace with the exact dataset URL used in your project.)*
 
 ---
 
@@ -157,7 +150,7 @@ dataset/validation_predictions.csv
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/fake-news-nlp.git
+git clone https://github.com/Casildagsf/Ironhack-NLP-Challenge-Group-3-Fake_News
 
 cd fake-news-nlp
 ```
@@ -208,9 +201,9 @@ streamlit run app.py
 project/
 
 │
-├── app.py
 ├── requirements.txt
 ├── README.md
+├── model_at_4_svm_tidf_joblib_predict.ipynb
 │
 ├── dataset/
 │   ├── data.csv
@@ -221,11 +214,12 @@ project/
 │   ├── mod4_joblib_svm_ngtfidf.pkl
 │   └── mod4_joblib_svm_ngtfidf_vectorizer.pkl
 │
-├── notebooks/
-│   └── model_at_4_svm_tidf_joblib_predict.ipynb
+├── streamlit/
+│   ├── app.py
 │
-└── assets/
-    └── screenshots/
+└── images/
+    └── screenshots
+    └── memes
 ```
 
 ---
@@ -255,17 +249,15 @@ project/
 
 ---
 
-# Author
+# Authors
 
-**Antonio Traquinas**
+**Antonio Traquinas** - https://github.com/wtraquinas/
+
+and 
+
+**Casilda Finat** - https://github.com/Casildagsf/
 
 AI Engineering | Machine Learning | NLP
-
-GitHub:
-https://github.com/AntonioTrx99
-
-LinkedIn:
-*(Add your LinkedIn profile URL here.)*
 
 ---
 
