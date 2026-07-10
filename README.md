@@ -1,5 +1,7 @@
 # 📰 Fake News Detection using NLP and Linear SVM
 
+<br>
+
 ## About
 
 This project applies **Natural Language Processing (NLP)** and **Machine Learning** to automatically classify news articles as **Real** or **Fake**. The solution uses text preprocessing, TF-IDF vectorization, and a Linear Support Vector Machine (SVM) classifier to achieve high classification performance.
@@ -11,6 +13,8 @@ A user-friendly **Streamlit web application** was also developed, allowing users
 <p align="center">
 <img src="/images/ToyStory-3758131314.jpg" height="420" alt="Horse prediction">
 </p>
+
+<br>
 
 ---
 
@@ -49,6 +53,8 @@ A user-friendly **Streamlit web application** was also developed, allowing users
 </center>
 
 
+<br>
+
 
 ---
 
@@ -57,6 +63,10 @@ A user-friendly **Streamlit web application** was also developed, allowing users
 🌐 **Streamlit Cloud**
 
 [https://project2-nlp-fakenews.streamlit.app](https://project2-nlp-fakenews.streamlit.app)
+
+
+<br>
+
 
 ---
 
@@ -124,6 +134,10 @@ Prediction
 Real / Fake
 ```
 
+
+<br>
+
+
 ### Text Preprocessing
 
 * Lowercase conversion
@@ -131,6 +145,10 @@ Real / Fake
 * Remove numbers
 * Remove stop words
 * Lemmatization
+
+
+<br>
+
 
 ### Feature Engineering
 
@@ -147,6 +165,10 @@ Real / Fake
 The final deployed model was saved using **Joblib** together with the trained TF-IDF vectorizer.
 
 ---
+
+
+<br>
+
 
 # Results
 
@@ -180,7 +202,7 @@ dataset/validation_predictions.csv
 <img src="/images/BERT_encoder.jpg" height="420" alt="BERT_encoder">
 </p>
 
-We also tested with Transfer Learning - Transformers Model BERT.
+We also tested with Transfer Learning - Transformers Model BERT, arriving at **100% accuracy** in Test.
 - Unlike TF-IDF (a fixed, non-trainable transform computed once), during trainer.train() the entire 110M-parameter BERT body is updated by backpropagation too, not just the classification head.
 - So "feature extraction" and "training" aren't separate stages anymore — the model is simultaneously learning what features matter for fake-news detection and adjusting its language understanding to your specific dataset.
 - That's the core meaning of transfer learning here: you start from features learned on a massive general-text pretraining corpus, then adapt them to this task.
@@ -243,7 +265,12 @@ Run the Streamlit application
 streamlit run app.py
 ```
 
+
+<br>
+
+
 ---
+
 
 # Project Structure
 
@@ -272,6 +299,8 @@ project/
     └── memes
 ```
 
+<br>
+
 ---
 
 # Tech Stack
@@ -285,6 +314,8 @@ project/
 * Streamlit
 * Jupyter Notebook
 
+<br>
+
 ---
 
 # Future Improvements
@@ -294,17 +325,19 @@ project/
 * Support multilingual fake news detection
 * Add source credibility analysis
 
+<br>
+
 ---
 
 # Authors
 
 **Antonio Traquinas** - https://github.com/wtraquinas/
 
-and 
+&
 
 **Casilda Finat** - https://github.com/Casildagsf/
 
-AI Engineering | Machine Learning | NLP
+<br>
 
 ---
 
@@ -313,6 +346,14 @@ AI Engineering | Machine Learning | NLP
 </p>
 
 
+<br>
+
+
 ## Acknowledgements
 
+Special thanks to the indefatigable **Luis Junco**, always ready to clear any doubt with seemingly infinite patience.
+
 This project was developed as part of the **IronHack AI Engineering Bootcamp**, demonstrating the complete machine learning workflow from data preprocessing to deployment of an interactive web application.
+
+<br>
+
