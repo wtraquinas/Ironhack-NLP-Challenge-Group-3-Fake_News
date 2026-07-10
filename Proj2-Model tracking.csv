@@ -1,2 +1,16 @@
-Model,Architecture,Learning Rate,Train Time,Accuracy,Notes
-Model 1,2 Conv layers,0.01,5 min,46%,Baseline - start here
+﻿Model;Feature extraction;Training model;Accuracy;test;Notes
+Base_model;TF-IDF;Log Regression;97.80%;;Baseline - start here
+Base_model;n-grams (TF-IDF);Log Regression;98%;;Baseline - start here
+Model_cf_2;Embedding - Word2Vec;Linear SVM;97%;;When increasing vector size from 100 - 300 increased accuracy from 96% - 97%
+Model_cf_3;BoW;Multinomial Naive Bayes;93%;;Decreased accuracy
+Model_cf_4;n-grams (TF-IDF);Multinomial Naive Bayes;93%;;same accuracy as with model_cf_3
+Model_cf_5;Embedding - Word2Vec;Log Regression;96,80%;;
+Model_cf_6; n-grams (TF-IDF);Log Regression;98,15%;;"same as baseline but changing to: max_features=20000, ngram_range=(1, 3) from max_features=5000, ngram_range=(1, 2)
+Energy innefficient for the slight increase"
+;;;;;
+model_at_2;TF-IDF;Multinomial Naive Bayes;93,8%;;
+model_at_2; n-grams (TF-IDF);Multinomial Naive Bayes;94,6%;;
+model_at_3;Embedding - Glove;Linear SVM;94,6%;;
+model_at_4;TF-IDF;Linear SVM;99,3%;;
+model_at_4; n-grams (TF-IDF);Linear SVM;99,4%;99,30%;
+model_at_5;bert-base-uncased;TL Fine-tuned BERT;99,98%;100,00%;20mins on Colab GPU
