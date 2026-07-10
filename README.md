@@ -62,6 +62,10 @@ A user-friendly **Streamlit web application** was also developed, allowing users
 
 # Problem Statement
 
+<p align="center">
+<img src="/images/bbc_fake_news.jpg" height="420" alt="BBC">
+</p>
+
 The rapid spread of misinformation through online news and social media makes it increasingly difficult to distinguish reliable information from fake news.
 
 The objective of this project is to build a machine learning model capable of automatically classifying news articles into:
@@ -70,6 +74,10 @@ The objective of this project is to build a machine learning model capable of au
 * **Fake**
 
 using only the article text.
+
+<br>
+
+
 
 ---
 
@@ -80,6 +88,13 @@ using only the article text.
 * File: `dataset/data.csv`
 * Text-based binary classification dataset
 
+<br>
+
+<p align="center">
+<img src="/images/ITDonkeySocks.jpg" height="220" alt="Donkey Socks">
+</p>
+
+<br>
 
 ---
 
@@ -143,27 +158,40 @@ Evaluation metrics include:
 * Precision
 * Recall
 * F1-score
-* Confusion Matrix
 
-Example evaluation:
-
-```
-Accuracy: (generated in notebook)
-
-Classification Report
-
-Precision
-Recall
-F1-score
-
-Confusion Matrix
-```
+<p align="center">
+<img src="/images/test_accuracy_lsvm_ngtfidf_20260710.jpg" height="420" alt="test_accuracy_lsvm_ngtfidf">
+</p>
 
 The notebook also evaluates the model on unseen validation data and exports predictions to:
 
 ```
 dataset/validation_predictions.csv
 ```
+
+<br>
+
+---
+
+## MODEL_AT_5 - Transfer Learning: Fine-tuned BERT (bert-base-uncased)
+
+
+<p align="center">
+<img src="/images/BERT_encoder.jpg" height="420" alt="BERT_encoder">
+</p>
+
+We also tested with Transfer Learning - Transformers Model BERT.
+- Unlike TF-IDF (a fixed, non-trainable transform computed once), during trainer.train() the entire 110M-parameter BERT body is updated by backpropagation too, not just the classification head.
+- So "feature extraction" and "training" aren't separate stages anymore — the model is simultaneously learning what features matter for fake-news detection and adjusting its language understanding to your specific dataset.
+- That's the core meaning of transfer learning here: you start from features learned on a massive general-text pretraining corpus, then adapt them to this task.
+
+<p align="center">
+<img src="/images/train_accuracy_finetune_bert_20260710.jpg" height="420" alt="train_accuracy_finetune_bert">
+<img src="/images/test_accuracy_finetune_bert_20260710.jpg" height="420" alt="test_accuracy_finetune_bert">
+</p>
+
+
+<br>
 
 ---
 
@@ -279,6 +307,11 @@ and
 AI Engineering | Machine Learning | NLP
 
 ---
+
+<p align="center">
+<img src="/images/fakenews_fallout.jpg" height="220" alt="fakenews_fallout">
+</p>
+
 
 ## Acknowledgements
 
