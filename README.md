@@ -1,39 +1,274 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+# 📰 Fake News Detection using NLP and Linear SVM
 
-# PROJECT | Natural Language Processing Challenge
+## About
 
-## Introduction
+This project applies **Natural Language Processing (NLP)** and **Machine Learning** to automatically classify news articles as **Real** or **Fake**. The solution uses text preprocessing, TF-IDF vectorization, and a Linear Support Vector Machine (SVM) classifier to achieve high classification performance.
 
-Learning how to process text is a skill required for Data Scientists/AI Engineers. 
+A user-friendly **Streamlit web application** was also developed, allowing users to paste news articles or select example articles and receive instant predictions with confidence scores.
 
-In this project, you will put these skills into practice to identify whether a news headline is real or fake news.
+---
 
-## Project Overview
+## Sample Prediction
 
-In the file `dataset/data.csv`, you will find a dataset containing news articles with the following columns:
+### Streamlit Application
 
-- **`label`**: 0 if the news is fake, 1 if the news is real.
-- **`title`**: The headline of the news article.
-- **`text`**: The full content of the article.
-- **`subject`**: The category or topic of the news.
-- **`date`**: The publication date of the article.
+> *(Insert a screenshot or GIF of the application here)*
 
-Your goal is to build a classifier that is able to distinguish between the two.
+Example output:
 
-Once you have a classifier built, then use it to predict the labels for `dataset/validation_data.csv`. Generate a new file
-where the label `2` has been replaced by `0` (fake) or `1` (real) according to your model. Please respect the original file format, 
-do not include extra columns, and respect the column separator. 
+```
+Prediction: ✅ Real News
 
-Please ensure to split the `data.csv` into **training** and **test** datasets before using it for model training or evaluation.
+Confidence: 98.6%
 
-## Guidance
+Decision Score: +2.84
+```
 
-Like in a real life scenario, you are able to make your own choices and text treatment.
-Use the techniques you have learned and the common packages to process this data and classify the text.
+---
 
-## Deliverables
+## Live Demo
 
-1. **Python Code:** Provide well-documented Python code that conducts the analysis.
-2. **Predictions:** A csv file in the same format as `validation_data.csv` but with the predicted labels (0 or 1)
-3. **Accuracy estimation:** Provide the teacher with your estimation of how your model will perform.
-4. **Presentation:** You will present your model in a 10-minute presentation. Your teacher will provide further instructions.
+🌐 **Hugging Face Spaces**
+
+https://huggingface.co/spaces/AntonioTrx99/project1_streamlit
+
+---
+
+# Problem Statement
+
+The rapid spread of misinformation through online news and social media makes it increasingly difficult to distinguish reliable information from fake news.
+
+The objective of this project is to build a machine learning model capable of automatically classifying news articles into:
+
+* **Real**
+* **Fake**
+
+using only the article text.
+
+---
+
+# Dataset
+
+**Dataset:** Fake News Dataset
+
+* Source: Kaggle
+* File: `dataset/data.csv`
+* Text-based binary classification dataset
+* Classes:
+
+  * Fake
+  * Real
+* License: Refer to the original Kaggle dataset license.
+
+Dataset link:
+
+https://www.kaggle.com/
+
+*(Replace with the exact dataset URL used in your project.)*
+
+---
+
+# Model Architecture
+
+## NLP Pipeline
+
+```
+Raw News Article
+        │
+        ▼
+Text Cleaning
+ • Lowercase
+ • Remove punctuation
+ • Remove numbers
+ • Remove stopwords
+ • Lemmatization
+        │
+        ▼
+TF-IDF Vectorization
+        │
+        ▼
+Linear Support Vector Machine
+        │
+        ▼
+Prediction
+Real / Fake
+```
+
+### Text Preprocessing
+
+* Lowercase conversion
+* Remove punctuation
+* Remove numbers
+* Remove stop words
+* Lemmatization
+
+### Feature Engineering
+
+* TF-IDF Vectorizer
+* TF-IDF with N-grams (best-performing model)
+
+### Machine Learning Models Tested
+
+* Multinomial Naive Bayes
+* Linear SVM
+* Linear SVM + TF-IDF
+* **Linear SVM + TF-IDF N-grams (Final Model)**
+
+The final deployed model was saved using **Joblib** together with the trained TF-IDF vectorizer.
+
+---
+
+# Results
+
+The final model achieved strong performance on both validation and test datasets.
+
+Evaluation metrics include:
+
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* Confusion Matrix
+
+Example evaluation:
+
+```
+Accuracy: (generated in notebook)
+
+Classification Report
+
+Precision
+Recall
+F1-score
+
+Confusion Matrix
+```
+
+The notebook also evaluates the model on unseen validation data and exports predictions to:
+
+```
+dataset/validation_predictions.csv
+```
+
+---
+
+# Setup & Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/fake-news-nlp.git
+
+cd fake-news-nlp
+```
+
+Create a virtual environment (recommended)
+
+```bash
+python -m venv .venv
+```
+
+Activate the environment
+
+Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the notebook
+
+```bash
+jupyter notebook
+```
+
+Run the Streamlit application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# Project Structure
+
+```
+project/
+
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── dataset/
+│   ├── data.csv
+│   ├── validation_data.csv
+│   └── validation_predictions.csv
+│
+├── models/
+│   ├── mod4_joblib_svm_ngtfidf.pkl
+│   └── mod4_joblib_svm_ngtfidf_vectorizer.pkl
+│
+├── notebooks/
+│   └── model_at_4_svm_tidf_joblib_predict.ipynb
+│
+└── assets/
+    └── screenshots/
+```
+
+---
+
+# Tech Stack
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* NLTK
+* Joblib
+* Streamlit
+* Jupyter Notebook
+
+---
+
+# Future Improvements
+
+* Fine-tune transformer models (BERT, RoBERTa, DistilBERT)
+* Add explainability using SHAP or LIME
+* Improve confidence estimation
+* Train on larger and more recent datasets
+* Support multilingual fake news detection
+* Add source credibility analysis
+* Deploy with Docker and CI/CD pipeline
+
+---
+
+# Author
+
+**Antonio Traquinas**
+
+AI Engineering | Machine Learning | NLP
+
+GitHub:
+https://github.com/AntonioTrx99
+
+LinkedIn:
+*(Add your LinkedIn profile URL here.)*
+
+---
+
+## Acknowledgements
+
+This project was developed as part of the **IronHack AI Engineering Bootcamp**, demonstrating the complete machine learning workflow from data preprocessing to deployment of an interactive web application.
